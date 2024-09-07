@@ -8,38 +8,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="box-border flex justify-center">
-    <div id="calculator">
-        <div id="display" class="border text-right text-6xl">0</div>
-        <div id="buttons" class="border">
+    <div id="calculator" class="bg-cyan-900">
+        <div id="display" class="border border-black text-right text-6xl bg-cyan-100 p-px">0</div>
+        <div id="buttons" class="border border-black p-px">
             <div id="row1" class="flex flex-row">
-                <button id="ac" class="basis-1/4 h-16 w-16 border rounded-full">AC</button>
-                <button id="parentheses" class="basis-1/4 h-16 w-16 border rounded-full">()</button>
-                <button id="percent" class="basis-1/4 h-16 w-16 border rounded-full">%</button>
-                <button id="divide" class="basis-1/4 h-16 w-16 border rounded-full">/</button>
+                <button id="ac" class="basis-1/4 h-16 w-16 border hover:border-2  border-black rounded-full bg-cyan-300 m-px">AC</button>
+                <button id="parentheses" class="basis-1/4 h-16 w-16 hover:border-2 border  border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">()</button>
+                <button id="percent" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">%</button>
+                <button id="divide" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">/</button>
             </div>
             <div id="row1" class="flex flex-row">
-                <button id="seven" class="basis-1/4 h-16 w-16 border rounded-full">7</button>
-                <button id="eight" class="basis-1/4 h-16 w-16 border rounded-full">8</button>
-                <button id="nine" class="basis-1/4 h-16 w-16 border rounded-full">9</button>
-                <button id="multiply" class="basis-1/4 h-16 w-16 border rounded-full">*</button>
+                <button id="seven" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">7</button>
+                <button id="eight" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">8</button>
+                <button id="nine" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">9</button>
+                <button id="multiply" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">*</button>
             </div>
             <div id="row1" class="flex flex-row">
-                <button id="four" class="basis-1/4 h-16 w-16 border rounded-full">4</button>
-                <button id="five" class="basis-1/4 h-16 w-16 border rounded-full">5</button>
-                <button id="six" class="basis-1/4 h-16 w-16 border rounded-full">6</button>
-                <button id="minus" class="basis-1/4 h-16 w-16 border rounded-full">-</button>
+                <button id="four" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">4</button>
+                <button id="five" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">5</button>
+                <button id="six" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">6</button>
+                <button id="minus" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">-</button>
             </div>
             <div id="row1" class="flex flex-row">
-                <button id="one" class="basis-1/4 h-16 w-16 border rounded-full">1</button>
-                <button id="two" class="basis-1/4 h-16 w-16 border rounded-full">2</button>
-                <button id="three" class="basis-1/4 h-16 w-16 border rounded-full">3</button>
-                <button id="plus" class="basis-1/4 h-16 w-16 border rounded-full">+</button>
+                <button id="one" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">1</button>
+                <button id="two" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">2</button>
+                <button id="three" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">3</button>
+                <button id="plus" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">+</button>
             </div>
             <div id="row1" class="flex flex-row">
-                <button id="zero" class="basis-1/4 h-16 w-16 border rounded-full">0</button>
-                <button id="comma" class="basis-1/4 h-16 w-16 border rounded-full">,</button>
-                <button id="backspace" class="basis-1/4 h-16 w-16 border rounded-full">Back</button>
-                <button id="equals" class="basis-1/4 h-16 w-16 border rounded-full">=</button>
+                <button id="zero" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">0</button>
+                <button id="comma" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-500 active:bg-cyan-700 m-px">,</button>
+                <button id="backspace" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">Back</button>
+                <button id="equals" class="basis-1/4 h-16 w-16 border hover:border-2 border-black rounded-full bg-cyan-300 active:bg-cyan-500 m-px">=</button>
             </div>
         </div>
     </div>
