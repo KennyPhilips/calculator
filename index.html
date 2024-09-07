@@ -4,42 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheer" href="styles.css">
     <script src="javascript.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="box-border flex justify-center">
     <div id="calculator">
-        <div id="display">0</div>
-        <div id="buttons">
-            <div id="row1">
-                <button id="ac">AC</button>
-                <button id="parentheses">()</button>
-                <button id="percent">%</button>
-                <button id="divide">/</button>
+        <div id="display" class="border text-right text-6xl">0</div>
+        <div id="buttons" class="border">
+            <div id="row1" class="flex flex-row">
+                <button id="ac" class="basis-1/4 h-16 w-16 border rounded-full">AC</button>
+                <button id="parentheses" class="basis-1/4 h-16 w-16 border rounded-full">()</button>
+                <button id="percent" class="basis-1/4 h-16 w-16 border rounded-full">%</button>
+                <button id="divide" class="basis-1/4 h-16 w-16 border rounded-full">/</button>
             </div>
-            <div id="row1">
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="multiply">*</button>
+            <div id="row1" class="flex flex-row">
+                <button id="seven" class="basis-1/4 h-16 w-16 border rounded-full">7</button>
+                <button id="eight" class="basis-1/4 h-16 w-16 border rounded-full">8</button>
+                <button id="nine" class="basis-1/4 h-16 w-16 border rounded-full">9</button>
+                <button id="multiply" class="basis-1/4 h-16 w-16 border rounded-full">*</button>
             </div>
-            <div id="row1">
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="minus">-</button>
+            <div id="row1" class="flex flex-row">
+                <button id="four" class="basis-1/4 h-16 w-16 border rounded-full">4</button>
+                <button id="five" class="basis-1/4 h-16 w-16 border rounded-full">5</button>
+                <button id="six" class="basis-1/4 h-16 w-16 border rounded-full">6</button>
+                <button id="minus" class="basis-1/4 h-16 w-16 border rounded-full">-</button>
             </div>
-            <div id="row1">
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="plus">+</button>
+            <div id="row1" class="flex flex-row">
+                <button id="one" class="basis-1/4 h-16 w-16 border rounded-full">1</button>
+                <button id="two" class="basis-1/4 h-16 w-16 border rounded-full">2</button>
+                <button id="three" class="basis-1/4 h-16 w-16 border rounded-full">3</button>
+                <button id="plus" class="basis-1/4 h-16 w-16 border rounded-full">+</button>
             </div>
-            <div id="row1">
-                <button id="zero">0</button>
-                <button id="comma">,</button>
-                <button id="backspace">Back</button>
-                <button id="equals">=</button>
+            <div id="row1" class="flex flex-row">
+                <button id="zero" class="basis-1/4 h-16 w-16 border rounded-full">0</button>
+                <button id="comma" class="basis-1/4 h-16 w-16 border rounded-full">,</button>
+                <button id="backspace" class="basis-1/4 h-16 w-16 border rounded-full">Back</button>
+                <button id="equals" class="basis-1/4 h-16 w-16 border rounded-full">=</button>
             </div>
         </div>
     </div>

@@ -103,7 +103,13 @@ buttons.forEach(button => {
             //als er een nummer wordt gedrukt
             if(isNumber(button.id)){
                 const number = getObject(button.id, numbers);
-                firstNumber += number[0].value;
+                if(button.id === "comma") {
+                    if(!hasComma(firstNumber.toString())){
+                        firstNumber += number[0].value;
+                    }
+                } else {
+                    firstNumber += number[0].value;
+                }
                 secondNumber = "";
                 operator = "";
                 operationText = "";
@@ -135,7 +141,13 @@ buttons.forEach(button => {
                 //als er een nummer wordt gedrukt
                 if(isNumber(button.id)){
                     const number = getObject(button.id, numbers);
-                    firstNumber += number[0].value;
+                    if(button.id === "comma") {
+                        if(!hasComma(firstNumber.toString())){
+                            firstNumber += number[0].value;
+                        }
+                    } else {
+                        firstNumber += number[0].value;
+                    }
                     secondNumber = "";
                     operator = "";
                     operationText = "";
@@ -166,8 +178,20 @@ buttons.forEach(button => {
                     //als er een nummer wordt gedrukt
                     if(isNumber(button.id)){
                         const number = getObject(button.id, numbers);
-                        //firstNumber += number[0].value;
-                        secondNumber += number[0].value;
+                        //if(button.id === "comma") {
+                        //    if(!hasComma(firstNumber)){
+                        //        firstNumber += number[0].value;
+                        //    }
+                        //} else {
+                        //    firstNumber += number[0].value;
+                        //}
+                        if(button.id === "comma") {
+                            if(!hasComma(secondNumber.toString())){
+                                secondNumber += number[0].value;
+                            }
+                        } else {
+                            secondNumber += number[0].value;
+                        }
                         //operator = "";
                         //operationText = "";
                         result = "";
@@ -189,8 +213,20 @@ buttons.forEach(button => {
                         //als er een nummer wordt gedrukt
                         if(isNumber(button.id)){
                             const number = getObject(button.id, numbers);
-                            //firstNumber += number[0].value;
-                            secondNumber += number[0].value;
+                            //if(button.id === "comma") {
+                            //    if(!hasComma(firstNumber)){
+                            //        firstNumber += number[0].value;
+                            //    }
+                            //} else {
+                            //    firstNumber += number[0].value;
+                            //}
+                            if(button.id === "comma") {
+                                if(!hasComma(secondNumber.toString())){
+                                    secondNumber += number[0].value;
+                                }
+                            } else {
+                                secondNumber += number[0].value;
+                            }
                             //operator = "";
                             //operationText = "";
                             result = "";
@@ -280,7 +316,14 @@ buttons.forEach(button => {
                             //als er een nummer wordt gedrukt
                             if(isNumber(button.id)){
                                 const number = getObject(button.id, numbers);
-                                firstNumber = number[0].value;
+                                if(button.id === "comma") {
+                                    firstNumber = result;
+                                    if(!hasComma(firstNumber.toString())){
+                                        firstNumber += number[0].value;
+                                    }
+                                } else {
+                                    firstNumber += number[0].value;
+                                }
                                 secondNumber = "";
                                 operator = "";
                                 operationText = "";
@@ -298,7 +341,39 @@ buttons.forEach(button => {
                                 display.textContent = firstNumber + operationText + secondNumber;
                             }
                             //als er equals wordt gedrukt
-
+                            if(button.id === "equals"){
+                                firstNumber = result;
+                                let resultEquation;
+                                if(operator === "divide") {
+                                    if(secondNumber === "0") {
+                                        firstNumber = "";
+                                        secondNumber = "";
+                                        operator = "";
+                                        operationText = "";
+                                        resultEquation = "Error! You cannot divide by zero!";
+                                    } else {
+                                        resultEquation = operate(operator, firstNumber, secondNumber);
+                                    }
+                                }
+                                if(operator === "multiply") {
+                                    resultEquation = operate(operator, firstNumber, secondNumber);
+                                }
+                                if(operator === "minus") {
+                                    resultEquation = operate(operator, firstNumber, secondNumber);
+                                }
+                                if(operator === "plus") {
+                                    resultEquation = operate(operator, firstNumber, secondNumber);
+                                }    
+                                if(operator === "percent") {
+                                    resultEquation = operate(operator, firstNumber, secondNumber);
+                                }                            
+                                //firstNumber = result;
+                                //secondNumber = "";
+                                //operator = operation[0].name;
+                                //operationText = operation[0].value;
+                                result = resultEquation;
+                                display.textContent = resultEquation;
+                            }
                         } 
                     }
                 } 
@@ -338,6 +413,10 @@ function getObject(id, array){
         }
     });
     return obj;
+}
+
+function hasComma(string){
+    return string.includes(".") ? true: false; 
 }
 
 function add(a, b){
